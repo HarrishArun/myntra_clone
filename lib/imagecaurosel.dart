@@ -11,6 +11,7 @@ class ImageCarousel extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider(
       options: CarouselOptions(
+        // autoPlayInterval: const Duration( seconds: 5),
         height: height,
         autoPlay: true,
         enlargeCenterPage: true,

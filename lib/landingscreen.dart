@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myntra_clone/appbar_title.dart';
 import 'package:myntra_clone/largecard.dart';
+import 'package:myntra_clone/productcard.dart';
 import 'package:myntra_clone/smallcard.dart';
 import 'constants.dart';
 import 'imagecaurosel.dart';
@@ -13,8 +14,7 @@ class landingpage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.white, title: appbartitle()),
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
+      body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           // mainAxisAlignment: MainAxisAlignment.start,
@@ -164,12 +164,111 @@ class landingpage extends StatelessWidget {
                             ],
                           ),
                         ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(8.0, 10, 8, 8),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              // Padding(
+                              //   padding: const EdgeInsets.all(10.0),
+                              //child:
+                              Text("BESTSELLERS", style: klabeltextstyle),
+                              // ),
+                              ElevatedButton(
+                                onPressed: () {},
+                                child: Text("EXPLORE >"),
+                                style: ButtonStyle(
+                                  elevation: MaterialStateProperty.all(0),
+                                  backgroundColor:
+                                      MaterialStateProperty.all(Color(kpink)),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 245,
+                          width: double.infinity,
+                          child: ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: [
+                              productcard(
+                                  14,
+                                  'images/beauty.png',
+                                  'LOreal',
+                                  'Shampoo and Conditioner',
+                                  196,
+                                  229,
+                                  10,
+                                  0,
+                                  180),
+                              productcard(
+                                  14,
+                                  'images/beauty.png',
+                                  'LOreal',
+                                  'Shampoo and Conditioner',
+                                  196,
+                                  229,
+                                  10,
+                                  0,
+                                  180),
+                              productcard(
+                                  14,
+                                  'images/beauty.png',
+                                  'LOreal',
+                                  'Shampoo and Conditioner',
+                                  196,
+                                  229,
+                                  10,
+                                  0,
+                                  180),
+                              productcard(
+                                  14,
+                                  'images/beauty.png',
+                                  'LOreal',
+                                  'Shampoo and Conditioner',
+                                  196,
+                                  229,
+                                  10,
+                                  0,
+                                  180)
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text("ALL PRODUCTS", style: klabeltextstyle),
+                    ),
+                    Row(
+                      children: [
+                        productcard(14, 'images/beauty.png', 'LOreal',
+                            'Shampoo and Conditioner', 196, 229, 0, 10, 0),
+                        productcard(14, 'images/beauty.png', 'LOreal',
+                            'Shampoo and Conditioner', 196, 229, 0, 10, 0)
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        productcard(14, 'images/beauty.png', 'LOreal',
+                            'Shampoo and Conditioner', 196, 229, 0, 10, 0),
+                        productcard(14, 'images/beauty.png', 'LOreal',
+                            'Shampoo and Conditioner', 196, 229, 0, 10, 0)
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        productcard(14, 'images/beauty.png', 'LOreal',
+                            'Shampoo and Conditioner', 196, 229, 0, 10, 0),
+                        productcard(14, 'images/beauty.png', 'LOreal',
+                            'Shampoo and Conditioner', 196, 229, 0, 10, 0)
                       ],
                     )
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
